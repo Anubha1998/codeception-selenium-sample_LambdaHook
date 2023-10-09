@@ -1,0 +1,21 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+modules:
+   enabled:
+      - WebDriver:
+         url: 'https://lambdatest.github.io/'
+         host: '%LT_USERNAME%:%LT_ACCESS_KEY%@hub.lambdatest.com'
+         port: 80
+         browser: firefox
+         capabilities:
+          name: 'Codeception Example'
+          build: 'codeception-sample'
+          browser: 'firefox'                 # request the latest version of chrome
+          platform: 'Windows 10'
+          version: 'latest' 
+
